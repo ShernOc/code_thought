@@ -2,7 +2,7 @@
 
 Code-Thought is a platform allows users to share ideas, concerns and the journey of a programmer. 
 
-# The application allows Users to : 
+# The Code-Thought allows Users to : 
 - To view the post blogs, 
 - To create post, and delete 
 
