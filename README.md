@@ -11,5 +11,3 @@ Code-Thought is a platform allows users to share ideas, concerns and the journey
 1. React installation
 2. Python
 3. SQL Alchemy 
-
-
