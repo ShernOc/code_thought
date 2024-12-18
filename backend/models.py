@@ -3,7 +3,7 @@ from sqlalchemy import Column, Text, String, Integer, Boolean, ForeignKey, DateT
 
 from sqlalchemy.ext.associationproxy import association_proxy
 
-from sqlalchemy.orm import declarative_base,  association_proxy, relationship, backref, association_proxy
+from sqlalchemy.orm import declarative_base, relationship 
 
 Base = declarative_base()
 
@@ -16,11 +16,11 @@ class User(Base):
     name = Column(String, nullable = True)
     email = Column(String, nullable= True)
     password = Column(String(128), nullable=False)
-    created_at = Column(DateTime, default_default= datetime.utcnow())
-    updated_at = Column(DateTime, onupdate=datetime.utcnow())
+    # created_at = Column(DateTime, default_default= datetime.utcnow())
+    # updated_at = Column(DateTime, onupdate=datetime.utcnow())
     
     #relationship with blog
-    blogs= association_proxy('comments', 'blog',creator = lambda gm:Comment(blog = gm))
+    blogs= association_proxy('comments', 'blog',creator = lambda bl:Comment(blog = bl))
     
     comments = relationship('Comment',back_populates='users')
 
@@ -37,7 +37,7 @@ class Blog(Base):
     comment_id = Column(Integer, ForeignKey('comments.id'))
     
     #relationship
-    user= relationship('User', back_populates='blogs')
+    users = association_proxy('comments', 'user', creator=lambda us: Comment(user=us))
     
     comments = relationship('Comment',back_populates='blogs')
     
@@ -67,6 +67,8 @@ class Admin(Base):
     id = Column(Integer, primary_key = True)
     user_name = Column(String, nullable = False)
     email = Column(String, nullable= False)
+    
+    
     
     
   
