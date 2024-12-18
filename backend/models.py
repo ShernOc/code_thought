@@ -1,5 +1,5 @@
 
-from sqlalchemy import Column, Text, String, Integer, Boolean, ForeignKey, DateTime 
+from sqlalchemy import Column, Text, String, Integer, Boolean, ForeignKey, DateTime, UniqueConstraint
 
 from sqlalchemy.orm import declarative_base, relationship, backref
 
@@ -7,6 +7,8 @@ Base = declarative_base()
 
 class User(Base):
     __tablename__ = 'users'
+    __table_arg__ = (UniqueConstraint ('email',
+                    name='unique_email'),)
     
     id = Column(Integer, primary_key = True)
     user_name = Column(String, nullable = True)
@@ -52,7 +54,9 @@ class Comment(Base):
     #Admin class 
     
 class Admin(Base): 
-    __tablename__ = 'admins'
+    __tablename__ = 'admin'
+    __table_arg__ = (UniqueConstraint('email',
+            name='unique_email'),)
     
     id = Column(Integer, primary_key = True)
     user_name = Column(String, nullable = False)
