@@ -16,10 +16,8 @@ if config.config_file_name is not None:
 
 # add your model's MetaData object here
 # for 'autogenerate' support
-from models.admin import Base
-from models.blog import Base
-from models.comment import Base
-from models.user import Base
+
+from models import Base
 target_metadata = Base.metadata
 # target_metadata = None
 
@@ -27,7 +25,6 @@ target_metadata = Base.metadata
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
-
 
 def run_migrations_offline() -> None:
     """Run migrations in 'offline' mode.
