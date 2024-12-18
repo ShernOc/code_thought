@@ -12,7 +12,7 @@ class User(Base):
     user_name = Column(String, nullable = True)
     email = Column(String, nullable= True)
     password = Column(String(128), nullable=False)
-    blog_id = Column(Integer, ForeignKey ("blogs.id"))
+    # blog_id = Column(Integer, ForeignKey ("blogs.id"))
     
     #relationship 
     blogs= relationship('Blog',back_populates='users')
