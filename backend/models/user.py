@@ -12,7 +12,6 @@ class User(Base):
     id = Column(Integer, primary_key = True)
     user_name = Column(String, nullable = True)
     email = Column(String, nullable= True)
-    
     password_hash = Column(String(128), nullable=False)
     
     #relationship 
