@@ -1,14 +1,48 @@
 from faker import Faker
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker 
 
-# from models import admin, blog, comment,user
-from models import User,Blog,Comment,Admin
+from config import * 
 
-from models import Base, User, Blog, Comment, Admin  # Import your models
+from models import Admin, Blog,Comment,User
 
-#seed.py is a file you for generation/populates random data. 
+fake= Faker()
+# generate random data of five database. 
 
-# The process of adding sample data to the database as "seeding." the database. 
+#random users 
+for _ in range(5):
+    user = User(user_name = fake.user_name(), email = fake.email(), password =fake.password())
+
+session.add(user)
+session.commit()
+
+#random blogs
+for _ in range(5):
+    blog = Blog(title = fake.title(), content = fake.content(),  user_id=fake.user_id())
+
+session.add(blog)
+session.commit()
+
+#random comments
+for _ in range(5):
+    comment = Comment(content = fake.content(), blog_id = fake.blog_id(), user_id =fake.user_id())
+
+session.add(comment)
+session.commit()
+
+#random admin
+for _ in range(2):
+    admin = Admin(user_name = fake.user_name(), content = fake.content(),  user_id=fake.user_id())
+
+session.add(admin)
+session.commit()
+
+#   Accessing the uses, blogs,comments
+admin1 = session.query(Admin).first()
+
+
+
+
+
+
+
 
 

@@ -6,7 +6,7 @@ from models import User,Blog,Comment,Admin
 
 engine = create_engine("sqlite:///code_thought.sqlite")
 
-
+#import session maker 
 Session = sessionmaker(bind = engine)
 session = Session()
 
