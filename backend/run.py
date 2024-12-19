@@ -1,3 +1,19 @@
+
+
+
+
+
+# NOTES 
+
+
+
+
+
+
+
+
+
+
 import models
 
 #test the work. 
