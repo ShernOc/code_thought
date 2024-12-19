@@ -1,17 +1,17 @@
 
 
-function Dashboard(){
+function Admin(){
 
     return(
         <>
         <img src="." alt="" />
 
         
-        
+        cd
         
         
         </>
     )
 }
 
-export default Dashboard ; 
+export default Admin; 
