@@ -1,0 +1,62 @@
+#root {
+  align-items:center;
+  padding: 10px;
+  text-align: center;
+}
+
+li, #contact {
+  list-style: none;
+  display: inline;
+  padding:15px;
+}
+p{
+  text-align: justify;
+  text-justify:inter-word;
+  justify-content:space-evenly;
+}
+
+form{
+  background:#83c5be;
+  display:grid;
+  font-weight: 500;
+  border-radius: 10px;
+  border: solid #24252e;
+  margin-block:0;
+  justify-items:center;
+  padding: 10px;
+  width: 100%;
+  margin: auto;
+  max-width: 300px; 
+}
+
+input,textarea{
+  padding:10px;
+  background-color:#edf6f9;
+  color:black;
+  font-size: 1em;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+.labelinput{
+  text-decoration:underline;
+}
+
+label{
+  font-weight: bold;
+}
+
+button {
+  background-color: #edf6f9;color:inherit; 
+  border-radius: 8px;
+  border:solid transparent;
+  padding:15px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color:#006D77;
+}
