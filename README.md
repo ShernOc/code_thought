@@ -7,7 +7,7 @@ Code-Thought is a platform allows users to share ideas, concerns and the journey
 - To create post, and delete 
 
 
-# Installation: 
+# Installations: 
 1. React installation
 2. Python
 3. SQL Alchemy 
