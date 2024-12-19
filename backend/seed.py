@@ -1,8 +1,7 @@
 from faker import Faker
 
-from config import * 
-
-from models import Admin, Blog,Comment,User
+from config import session
+from models import Admin,Blog,Comment,User
 
 fake= Faker()
 # generate random data of five database. 
