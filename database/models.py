@@ -1,9 +1,7 @@
 
 from sqlalchemy import Column, Text, String, Integer, Boolean, ForeignKey, DateTime, UniqueConstraint, DateTime
 
-from database.config import relationship, association_proxy,declarative_base
-
-
+from config import relationship, association_proxy,declarative_base
 
 Base = declarative_base()
 
@@ -25,7 +23,7 @@ class User(Base):
     comments = relationship('Comment',back_populates='users')
 
 
-    #blog content class 
+#blog class 
 class Blog(Base):
     __tablename__ = 'blogs'
     
@@ -41,7 +39,7 @@ class Blog(Base):
     
     comments = relationship('Comment',back_populates='blogs')
     
-    #Comment class: 
+#Comment class: 
 class Comment(Base): 
     __tablename__ = 'comments'
     

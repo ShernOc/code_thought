@@ -2,7 +2,7 @@ from faker import Faker
 
 from database.config import * 
 
-from models import Admin, Blog,Comment,User
+
 
 fake= Faker()
 # generate random data of five database. 

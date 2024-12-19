@@ -1,5 +1,7 @@
 # here you import 
-from config import *
+from config import session
+from models import *
+
 
 # create the CRUD functions here and test them. 
 def create_user(user_name):
