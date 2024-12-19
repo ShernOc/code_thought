@@ -1,6 +1,6 @@
 from faker import Faker
 
-from config import * 
+from database.config import * 
 
 from models import Admin, Blog,Comment,User
 

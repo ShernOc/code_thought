@@ -1,9 +1,9 @@
 
 from sqlalchemy import Column, Text, String, Integer, Boolean, ForeignKey, DateTime, UniqueConstraint, DateTime
 
-from sqlalchemy.ext.associationproxy import association_proxy
+from database.config import relationship, association_proxy,declarative_base
 
-from sqlalchemy.orm import declarative_base, relationship 
+
 
 Base = declarative_base()
 
