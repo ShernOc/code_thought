@@ -12,7 +12,7 @@ function Contact(){
         <>
         <div>
                 <h2>Contact Me</h2>
-                <form action="" id="forminput" onSubmit  {handleForm}>
+                <form action="" id="forminput" onSubmit = {handleForm}>
                     <h3 className="labelinput">Leave a Message</h3>
                     <label htmlFor="name">Your Name</label>
                     <input type="text" name="name"/>
