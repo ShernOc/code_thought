@@ -13,6 +13,7 @@ class User(Base):
     id = Column(Integer, primary_key = True)
     name = Column(String, nullable = True)
     email = Column(String, nullable= True)
+    password = Column(String, nullable= True)
     password = Column(String(128), nullable=False)
     # created_at = Column(DateTime, default_default= datetime.utcnow())
     # updated_at = Column(DateTime, onupdate=datetime.utcnow())
@@ -54,6 +55,8 @@ class Comment(Base):
     user= relationship('User', back_populates='comments') 
     
     blog = relationship('Blog', back_populates = 'comments')
+    
+    
     
 
     

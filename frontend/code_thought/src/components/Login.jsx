@@ -1,6 +1,7 @@
 // Login.jsx
 import { useState } from 'react';
 import { useAuth } from "./Signin";
+// import { Navigate } from 'react-router';
 
 const Login = () => {
   const { login } = useAuth();
@@ -10,10 +11,8 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     login(email, password);
-   
 
   };
-
 
   return (
     <div className="container mx-auto p-4">

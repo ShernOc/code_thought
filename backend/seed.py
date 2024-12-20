@@ -1,47 +1,40 @@
 from faker import Faker
-
 from config import session
-from models import Admin,Blog,Comment,User
+from models import Blog,Comment,User
+
 
 fake= Faker()
 # generate random data of five database. 
 
 #random users 
 for _ in range(5):
-    user = User(user_name = fake.user_name(), email = fake.email(), password =fake.password())
+    user = User(
+        user_name = fake.name(), 
+        email = fake.email(), 
+        password =fake.password())
 
 session.add(user)
 session.commit()
 
 #random blogs
+users = session.query(User).all()
 for _ in range(5):
-    blog = Blog(title = fake.title(), content = fake.content(),  user_id=fake.user_id())
+    blog = Blog(
+        title = fake.sentence(), 
+        content = fake.text(),  user_id=fake.random_choices([user.id for user in users]) # random assignment of users. 
+        )
 
 session.add(blog)
 session.commit()
 
 #random comments
+blogs = session.query(Blog).all() 
 for _ in range(5):
-    comment = Comment(content = fake.content(), blog_id = fake.blog_id(), user_id =fake.user_id())
+    comment = Comment(
+        content = fake.text(), 
+        blog_id = fake.random_element([blog.id for blog in blogs]), user_id =fake.random_element([user.id for user in users]))
 
 session.add(comment)
 session.commit()
 
-#random admin
-for _ in range(2):
-    admin = Admin(user_name = fake.user_name(), content = fake.content(),  user_id=fake.user_id())
-
-session.add(admin)
-session.commit()
-
-#   Accessing the uses, blogs,comments
-admin1 = session.query(Admin).first()
-
-
-
-
-
-
-
-
-
+print("Random data will be displayed")

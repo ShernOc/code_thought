@@ -8,6 +8,10 @@ Code-Thought is a platform allows users to share ideas, concerns and the journey
 
 
 # Installations: 
-1. React installation
+1. React installation: reat-dom, npm
 2. Python
 3. SQL Alchemy 
+4. Fast Api: 
+- installed: Alembic, passlib[crypt] for authentications, pyjwt: Token
+
+

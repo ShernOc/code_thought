@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import firebase from 'firebase/compat/app';
-
+import { signInWithEmailAndPassword,signOut } from 'firebase/auth'
+import { auth } from '../../../config/firebase';
 
 // Authentication 
 const Signin = createContext();
@@ -12,16 +13,16 @@ export const AuthProvider = ({children})=>{
 
   const login = async (email, password) => {
     try {
-      const { user } = await firebase.auth().signInWithEmailAndPassword(email, password);
-      setUser(user);
-      navigate('./blogs');
+      const userCredential = await signInWithEmailAndPassword(auth,email, password);
+      setUser(userCredential.user);
+      navigate('/blogs');
     } catch (error) {
       console.error(error);
     }
   };
 
   const logout = async () => {
-    await firebase.auth().signOut();
+    await signOut(auth);
     setUser(null);
     navigate('/');
   };
