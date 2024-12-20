@@ -1,5 +1,6 @@
 // Login.jsx
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import { useAuth } from "./Signin";
 // import { Navigate } from 'react-router';
 
@@ -7,10 +8,13 @@ const Login = () => {
   const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
     login(email, password);
+    navigate('/login')
 
   };
 

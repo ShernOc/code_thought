@@ -1,5 +1,4 @@
 // import Navbar from "./Navbar";
-import Footer from "./Footer";
 function Home() {
     return (
         <>
@@ -8,7 +7,7 @@ function Home() {
 
             <p className="ml-10 text-right text-lg  font-semibold">&quot;Programming is not about what you know; it is about what you can figure out.&quot;</p>
             </div> 
-            <Footer/>
+            
         </>
     )
 

@@ -22,9 +22,9 @@ function App() {
       <Route path='/contact' element = { <Contact/>}/>
       <Route path='/blog' element = { <Blog/>}/>
       <Route path='/login' element = { <Login/>}/>
-      <Route path='/footer' element = { <Footer/>}/>
     </Routes> 
     </div>
+    <Footer/>
     </AuthProvider>
     </>
   );
