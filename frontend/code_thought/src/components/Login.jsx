@@ -20,7 +20,7 @@ const Login = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h2 className="text-xl font-bold mb-4">Login</h2>
+      <h2 className="text-xl font-bold mb-4">Sign-up</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Email</label>
@@ -43,7 +43,7 @@ const Login = () => {
           />
         </div>
         <button type="submit" className="bg-green-100
-        px-4 py-2 rounded">Login</button>
+        px-2 py-1 rounded">Login</button>
       </form>
     </div>
   );

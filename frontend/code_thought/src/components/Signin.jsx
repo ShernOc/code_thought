@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// // import { signInWithEmailAndPassword,signOut } from 'firebase/auth'
+// import { signInWithEmailAndPassword,signOut } from 'firebase/auth'
 // import { auth } from '../../../config/firebase';
 
 // Authentication 
@@ -15,7 +15,7 @@ export const AuthProvider = ({children})=>{
     try {
       const userCredential = await(email, password);
       setUser(userCredential);
-      navigate('/blogs');
+      navigate('/'); // takes you the homepage: 
     } catch (error) {
       console.error(error);
     }

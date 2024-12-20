@@ -4,9 +4,10 @@ import Contact from './Contact';
 import Home from './Home';
 import About from './About';
 import Blog from './Blog';
+import Blogcard from './Blogcard'
 import Footer from './Footer';
 import Login from './Login';
-import {Navbar} from './Navbar'
+import {Navbar} from './Navbar';
 import { AuthProvider} from './Signin' ;
 
 
@@ -18,9 +19,10 @@ function App() {
       <Navbar/>
       <Routes>
       <Route path='/' element = { <Home/>}/>
+      <Route path='/blog' element = { <Blog/>}/>
+      <Route path="/blogcard/:id" element={<Blogcard />} />
       <Route path='/about' element = { <About/>}/>
       <Route path='/contact' element = { <Contact/>}/>
-      <Route path='/blog' element = { <Blog/>}/>
       <Route path='/login' element = { <Login/>}/>
     </Routes> 
     </div>

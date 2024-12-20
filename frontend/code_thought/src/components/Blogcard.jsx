@@ -10,7 +10,7 @@ function Blogcard(){
     const [newComment, setNewComment] = useState('');
 
     useEffect(() => {
-        axios.get(`/api/blogs/${id}`).then((response) => {
+        axios.get(`/api/blog/${id}`).then((response) => {
           setBlog(response.data.blog);
           setComments(response.data.comments);
         });
