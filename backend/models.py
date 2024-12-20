@@ -55,16 +55,7 @@ class Comment(Base):
     
     blog = relationship('Blog', back_populates = 'comments')
     
-    
-#Admin class  
-class Admin(Base): 
-    __tablename__ = 'admin'
-    __table_arg__ = (UniqueConstraint('email',
-            name='unique_email'),)
-    
-    id = Column(Integer, primary_key = True)
-    user_name = Column(String, nullable = False)
-    email = Column(String, nullable= False)
+
     
     
     
