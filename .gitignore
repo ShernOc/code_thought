@@ -1,4 +1,7 @@
 .venv/*
 .pytest_cache
 .env
+config/firebase
+
+
 

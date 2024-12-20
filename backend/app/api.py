@@ -24,6 +24,13 @@ async def read_root()->dict: # excuted will return dictionary
     return {"message":"Welcome to FastApi!"} # converted to json 
 
 
+#Get route for resting 
+#@app.get(models)
+
+
+@app.get("/models", tags = ["models"]) # categorize tag.
+async def get_models()->dict: # excuted will return dictionary 
+    return {"bloglist":"Welcome to FastApi!"} # converted to json 
 
 
 

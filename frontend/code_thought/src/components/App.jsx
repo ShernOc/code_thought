@@ -1,38 +1,32 @@
 import './App.css'
 import {Routes,Route } from 'react-router-dom';
 import Contact from './Contact';
-import  Dashboard from './Dashboard';
-import ShowBlog from './ShowBlog';
-import Footer from './Footer';
-import Signin from './Signin';
-import Signout from './Signout';
+import Home from './Home';
 import About from './About';
+import Blog from './Blog';
+import Footer from './Footer';
+import Login from './Login';
+import {Navbar} from './Navbar'
+import { AuthProvider} from './Signin' ;
 
 
 function App() {
-
-
   return (
     <>
-    <div className='container'>
+    <AuthProvider>
+    <div className='container' >
+      <Navbar/>
       <Routes>
-      <Route path='/dashboard' element = { <Dashboard/>}/>
+      <Route path='/' element = { <Home/>}/>
       <Route path='/about' element = { <About/>}/>
-      <Route path='/show-blog' element = { <ShowBlog/>}/>
       <Route path='/contact' element = { <Contact/>}/>
+      <Route path='/blog' element = { <Blog/>}/>
+      {/* <Route path='/login' element = { <Login/>}/> */}
       <Route path='/footer' element = { <Footer/>}/>
-      <Route path='/signin' element = { <Signin/>}/>
-      <Route path='/signout' element = { <Signout/>}/>
     </Routes> 
     </div>
-     
-
-{/*    
-    <ShowBlog/>
-    <Contact />
-    <Footer/> */}
+    </AuthProvider>
     </>
   );
 };
-
 export default App;

@@ -31,6 +31,11 @@ print(comment1.user_id, "has written this", comment1.content)
 # print(fetch_user.name)
 
 
+#1. How do you connect the database to the react data? 
+#2. How will i be able to create a full functioning. database using sql, fastapi: 
+#3. 
+
+
 
 
 
