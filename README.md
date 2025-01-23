@@ -21,3 +21,4 @@ Code-Thought is a platform allows users to share ideas, concerns and the journey
 -https://docs.google.com/presentation/d/1n7M7sDkY7kFO5DQZmeq3IDDdM89ZDScj1lUSdO-5NO4/edit?usp=sharing
 
 
+#Try to Delete the Node-Modules
