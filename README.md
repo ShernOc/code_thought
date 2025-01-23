@@ -12,6 +12,12 @@ Code-Thought is a platform allows users to share ideas, concerns and the journey
 2. Python
 3. SQL Alchemy 
 4. Fast Api: 
-- installed: Alembic, passlib[crypt] for authentications, pyjwt: Token
+5. installed: Alembic, passlib[crypt] for authentications, pyjwt: Token
+
+#Next feature be able to display: 
+
+
+# Links: 
+-https://docs.google.com/presentation/d/1n7M7sDkY7kFO5DQZmeq3IDDdM89ZDScj1lUSdO-5NO4/edit?usp=sharing
 
 
